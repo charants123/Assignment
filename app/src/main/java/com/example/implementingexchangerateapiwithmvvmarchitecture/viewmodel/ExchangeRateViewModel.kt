@@ -1,5 +1,6 @@
 package com.example.implementingexchangerateapiwithmvvmarchitecture.viewmodel
 
+import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -8,10 +9,8 @@ import com.example.implementingexchangerateapiwithmvvmarchitecture.data.Exchange
 import com.example.implementingexchangerateapiwithmvvmarchitecture.data.ExchangeRateRepository
 import kotlinx.coroutines.launch
 
-
-
-
 class ExchangeRateViewModel : ViewModel() {
+    val TAG:String="ViewModel"
 
     private val repository = ExchangeRateRepository()  // Repository instance
 
@@ -26,8 +25,10 @@ class ExchangeRateViewModel : ViewModel() {
             try {
                 val response = repository.getExchangeRates()
                 _exchangeRates.postValue(response.data)
+                Log.d(TAG, "fetchExchangeRates: "+response.toString())
             } catch (e: Exception) {
                 _error.postValue("Failed to fetch data: ${e.message}")
+                Log.d(TAG, "fetchExchangeRates: "+e.toString())
             }
         }
     }

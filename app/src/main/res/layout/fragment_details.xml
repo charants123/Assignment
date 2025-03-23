@@ -1,63 +1,78 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
+<androidx.cardview.widget.CardView
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:padding="16dp">
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/margin_top"
+    android:layout_marginHorizontal="@dimen/size"
+    app:cardCornerRadius="@dimen/card_corner_radius"
+    app:cardElevation="@dimen/card_elevation"
+    android:foreground="?attr/selectableItemBackground">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:padding="@dimen/padding"
         android:orientation="vertical">
 
         <TextView
             android:id="@+id/tvRecordDate"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Record Date:"
-            android:textSize="16sp"
+            android:text="@string/record_date"
+            android:textSize="@dimen/size"
             android:textStyle="bold"
-            android:textColor="@android:color/black"/>
+            android:layout_marginBottom="@dimen/margin_bottom"
+            android:textColor="@color/black"/>
 
         <TextView
             android:id="@+id/tvCountry"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Country:"
-            android:textSize="16sp"
-            android:textColor="@android:color/darker_gray"/>
+            android:text="@string/country"
+            android:textStyle="bold"
+            android:textSize="@dimen/size"
+            android:layout_marginBottom="@dimen/margin_bottom"
+            android:textColor="@color/black"/>
 
         <TextView
             android:id="@+id/tvCurrency"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Currency:"
-            android:textSize="16sp"
-            android:textColor="@android:color/darker_gray"/>
+            android:text="@string/currency"
+            android:textSize="@dimen/size"
+            android:textStyle="bold"
+            android:layout_marginBottom="@dimen/margin_bottom"
+            android:textColor="@color/black"/>
 
         <TextView
             android:id="@+id/tvDescription"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Description:"
-            android:textSize="16sp"
-            android:textColor="@android:color/darker_gray"/>
+            android:text="@string/description"
+            android:textSize="@dimen/size"
+            android:textStyle="bold"
+            android:layout_marginBottom="@dimen/margin_bottom"
+            android:textColor="@color/black"/>
 
         <TextView
             android:id="@+id/tvExchangeRate"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Exchange Rate:"
-            android:textSize="16sp"
-            android:textColor="@android:color/darker_gray"/>
+            android:text="@string/exchange_rate"
+            android:textSize="@dimen/size"
+            android:textStyle="bold"
+            android:layout_marginBottom="@dimen/margin_bottom"
+            android:textColor="@color/black"/>
 
         <TextView
             android:id="@+id/tvEffectiveDate"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Effective Date:"
-            android:textSize="16sp"
-            android:textColor="@android:color/darker_gray"/>
-
+            android:text="@string/effective_date"
+            android:textSize="@dimen/size"
+            android:textStyle="bold"
+            android:textColor="@color/black"/>
     </LinearLayout>
-</ScrollView>
+</androidx.cardview.widget.CardView>
