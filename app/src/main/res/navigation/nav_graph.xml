@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/exchangeRateFragment">
+
+    <fragment
+        android:id="@+id/exchangeRateFragment"
+        class="com.example.implementingexchangerateapiwithmvvmarchitecture.ui.ExchangeRateFragment"
+        android:label="Exchange Rates"
+        tools:layout="@layout/fragment_exchange_rate">
+        <action
+            android:id="@+id/action_exchangeRateFragment_to_detailsFragment"
+            app:destination="@id/detailsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/detailsFragment"
+        class="com.example.implementingexchangerateapiwithmvvmarchitecture.ui.DetailsFragment"
+        android:label="Details"
+        tools:layout="@layout/fragment_details">
+        <argument
+            android:name="exchangeRate"
+            app:argType="com.example.implementingexchangerateapiwithmvvmarchitecture.data.ExchangeRate" />
+        <action
+            android:id="@+id/action_detailsFragment_to_exchangeRateFragment"
+            />
+    </fragment>
+</navigation>
